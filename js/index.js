@@ -1,8 +1,9 @@
 var database = firebase.database();
 var db;
+let data = {};
 
 function collectData() {
-    let data = {};
+    
     let name = document.getElementsByName("name");
     let email = document.getElementsByName("email");
     let age = document.getElementsByName("age");
@@ -12,7 +13,7 @@ function collectData() {
     data[email[0].name] = email[0].value;
     data[age[0].name] = age[0].value;
 
-    
+    console.log(this)
     /*
     alert(db.email + " " + email[0].value);
 
@@ -47,3 +48,4 @@ function testFn(input) {
 }
 
 // snap();
+
