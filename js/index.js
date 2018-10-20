@@ -7,11 +7,13 @@ function collectData() {
     let name = document.getElementsByName("name");
     let email = document.getElementsByName("email");
     let age = document.getElementsByName("age");
+    let date = document.getElementsByName("date");
 
 
     data[name[0].name] = name[0].value;
     data[email[0].name] = email[0].value;
     data[age[0].name] = age[0].value;
+    data[date[0].name] = date[0].value;
 
 
     /*
@@ -25,13 +27,13 @@ function collectData() {
     }
     */
 
-    writeUserData(name[0].value, email[0].value, age[0].value);
+    writeUserData(date[0].value, name[0].value, email[0].value, age[0].value);
 
 
 }
 
-function writeUserData(name, email, age) {
-    firebase.database().ref('user-data/' + name).set({
+function writeUserData(date, name, email, age) {
+    firebase.database().ref('user-data/' + date).set({
         username: name,
         email: email,
         age: age
