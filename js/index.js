@@ -3,7 +3,7 @@ var db;
 let data = {};
 
 function collectData() {
-    
+
     let name = document.getElementsByName("name");
     let email = document.getElementsByName("email");
     let age = document.getElementsByName("age");
@@ -13,7 +13,7 @@ function collectData() {
     data[email[0].name] = email[0].value;
     data[age[0].name] = age[0].value;
 
-    console.log(this)
+
     /*
     alert(db.email + " " + email[0].value);
 
@@ -25,7 +25,17 @@ function collectData() {
     }
     */
 
+    writeUserData(name[0].value, email[0].value, age[0].value);
 
+
+}
+
+function writeUserData(name, email, age) {
+    firebase.database().ref('user-data/' + name).set({
+        username: name,
+        email: email,
+        age: age
+    });
 }
 
 function updateFirebase(name, value) {
