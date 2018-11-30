@@ -33,7 +33,7 @@ function collectData() {
 }
 
 function writeUserData(date, name, email, age) {
-    firebase.database().ref('user-data/' + date).set({
+    firebase.database().ref('test/' + date).set({
         username: name,
         email: email,
         age: age
