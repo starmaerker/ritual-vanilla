@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rituals</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
 
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCyy620DdlcWwTK0zNRXvgjdQBmHen6JnU",
-            authDomain: "lernwerkstatt-lotto.firebaseapp.com",
-            databaseURL: "https://lernwerkstatt-lotto.firebaseio.com",
-            projectId: "lernwerkstatt-lotto",
-            storageBucket: "lernwerkstatt-lotto.appspot.com",
-            messagingSenderId: "1012820012693"
-        };
-        firebase.initializeApp(config);
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCyy620DdlcWwTK0zNRXvgjdQBmHen6JnU",
+        authDomain: "lernwerkstatt-lotto.firebaseapp.com",
+        databaseURL: "https://lernwerkstatt-lotto.firebaseio.com",
+        projectId: "lernwerkstatt-lotto",
+        storageBucket: "lernwerkstatt-lotto.appspot.com",
+        messagingSenderId: "1012820012693"
+      };
+      firebase.initializeApp(config);
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>My Vanilla Ritual App</h1>
+    <div class="rituals">
+      <h2><a href="rituals.html">Rituals</a></h2>
+    </div>
+    <div class="challenges">
+      <h2><a href="challenges.html">Challenges</a></h2>
+    </div>
+    <div class="behavior">
+      <h2><a href="behavior.html">Behavior</a></h2>
+    </div>
+    <hr />
     <form>
-        <input type="text" name="name" placeholder="Enter your name" /><br>
-        <input type="email" name="email" placeholder="Enter your email" /><br>
-        <input type="number" name="age" min="1" max="130" placeholder="Enter your age" /><br>
-        <input type="date" name="date" placeholder="Enter a date" /><br>
-        <input type="submit" name="submit" onclick="collectData();" />
+      <input type="text" name="name" placeholder="Enter your name" /><br />
+      <input type="email" name="email" placeholder="Enter your email" /><br />
+      <input
+        type="number"
+        name="age"
+        min="1"
+        max="130"
+        placeholder="Enter your age"
+      /><br />
+      <input type="date" name="date" placeholder="Enter a date" /><br />
+      <input type="submit" name="submit" onclick="collectData();" />
     </form>
-</body>
-<script src="js/index.js"></script>
-
+  </body>
+  <script src="js/index.js"></script>
 </html>
