@@ -7,6 +7,6 @@ h1 {
   font-family: monospace;
 }
 
-.noblocka {
-  display: inline;
+.noblock {
+  display: inline-block;
 }
